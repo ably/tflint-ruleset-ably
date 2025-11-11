@@ -43,8 +43,8 @@ func (r *RightmostOperatorRule) Check(runner tflint.Runner) error {
 		return err
 	}
 
-	for filename, file := range files {
-		if err := r.checkFile(runner, file, filename); err != nil {
+	for _, file := range files {
+		if err := r.checkFile(runner, file); err != nil {
 			return err
 		}
 	}
@@ -52,7 +52,7 @@ func (r *RightmostOperatorRule) Check(runner tflint.Runner) error {
 	return nil
 }
 
-func (r *RightmostOperatorRule) checkFile(runner tflint.Runner, file *hcl.File, filename string) error {
+func (r *RightmostOperatorRule) checkFile(runner tflint.Runner, file *hcl.File) error {
 	// Parse the file body
 	body, ok := file.Body.(*hclsyntax.Body)
 	if !ok {
