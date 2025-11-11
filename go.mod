@@ -9,6 +9,7 @@ require (
 )
 
 require (
+	github.com/Masterminds/semver v1.5.0 // indirect
 	github.com/agext/levenshtein v1.2.1 // indirect
 	github.com/apparentlymart/go-textseg/v15 v15.0.0 // indirect
 	github.com/fatih/color v1.13.0 // indirect
