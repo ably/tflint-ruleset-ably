@@ -54,6 +54,7 @@ plugin "ably" {
 |Name|Description|Severity|
 | --- | --- | --- |
 |rightmost_operator_rule|Rule for enforcing required_provider version format: `~> x.y`|WARNING|
+|aws_module_version_rule|Rule for ensuring terraform-aws-modules versions match AWS provider versions and use `~> x.y` format|WARNING|
 
 ## Building the plugin
 
